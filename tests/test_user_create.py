@@ -1,12 +1,11 @@
 import API
 import allure
-
 import genlogic
 from DATA import *
 
 
 class TestUserCreate:
-    @allure.title('Успешное создание пользователя')
+    @allure.title('Успешное создание уникального пользователя')
     @allure.description('Проверка на успешное создание юзера, соответствия статус-кода и ответа')
     def test_user_create(self):
         user = API.user_create(genlogic.GeneratedPayloads().RANDOM_PAYLOAD)
@@ -20,7 +19,7 @@ class TestUserCreate:
         user = API.user_create(StaticData.STATIC_USER)
         assert user.status_code == StatusCodes.FORBIDDEN and user.json()[Other.MESSAGE_JSON] == Responses.USER_EXISTING
 
-    @allure.title('Заполнение полей')
+    @allure.title('Заполнение не всех обязательных полей')
     @allure.description('Проверка на ошибку, соответствие статус-кода и ответа')
     def test_user_create_required_fields(self):
         user = API.user_create(genlogic.GeneratedPayloads().MAIL_PASS_ONLY)

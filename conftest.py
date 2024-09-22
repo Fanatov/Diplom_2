@@ -5,7 +5,7 @@ import genlogic
 from genlogic import GeneratedPayloads
 
 
-@pytest.fixture
+@pytest.fixture(scope='function')
 def payloading():
     payload = genlogic.GeneratedPayloads().RANDOM_PAYLOAD
     response = API.user_create(payload)

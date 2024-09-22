@@ -29,11 +29,38 @@ class StaticData:
         "password": "12345678",
         "name": "fgdgdgdfgdfg"
     }
-
+    STATIC_USER_LOGIN = {
+        "email": "uyghnbnvbvrsadsarrrr@a.ru",
+        "password": "12345678"
+    }
+    STATIC_FAIL_USER_LOGIN = {
+        "email": "uyghnbnvbvrsadsarrrr@a.ru",
+        "password": "1PRAKTIKUM23s4s5678"
+    }
+    STATIC_USER_UPDATE_INFO = {
+        "email": "opachkiogogog@a.ru",
+        "password": "876543210",
+        "name": "VOTETOPROVERKA"
+    }
+    STATIC_UPDATE_PASSWORD_LOGIN_OLD = {
+        "email": "test@yaa.ruu",
+        "password": "12345678"
+    }
+    STATIC_UPDATE_PASSWORD_TO_NEW = {
+        "password": "123456789"
+    }
+    STATIC_UPDATE_PASSWORD_TO_OLD = {
+        "password": "12345678"
+    }
+    STATIC_UPDATE_PASSWORD_LOGIN_NEW = {
+        "email": "test@yaa.ruu",
+        "password": "123456789"
+    }
 class Other:
     ACCESS_TOKEN = f'accessToken'
     SUCCESS_JSON = f'success'
     MESSAGE_JSON = f'message'
+    REFRESH_TOKEN = f'refreshToken'
     FAIL_INGRIDIENTS_DATA = {
         "ingredients": ["1sss", "609646e4dc916e00276b2870"]}
     SUCCESS_INGRIDIENTS_DATA = {

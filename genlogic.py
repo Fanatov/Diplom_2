@@ -12,6 +12,10 @@ class GeneratedPayloads:
         self.MAIL_PASS_ONLY = {"email": self.create_random_mail(),
                           "password": self.create_random_password()}
 
+        self.MAIL_ONLY = {"email": self.create_random_mail()}
+        self.PASSWORD_ONLY = {"password": self.create_random_password()}
+        self.NAME_ONLY = {"name": self.create_random_name()}
+
     def create_random_mail(self):
         name = ''.join(random.choices(string.ascii_letters, k=12))
         random_digits = str(random.randint(1, 1999))
